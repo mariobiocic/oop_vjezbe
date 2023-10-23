@@ -22,7 +22,7 @@ int main()
 
 	vektor1.push_back(suma);
 	for (int broj : vektor1) {
-		std::cout << broj << ' ';
+		cout << broj << ' ';
 	}
 
 	return 0;
