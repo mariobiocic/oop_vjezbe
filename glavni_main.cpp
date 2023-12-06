@@ -12,7 +12,7 @@ int main()
     owner1.addPet(pet1);
     owner1.addPet(pet2);
 
-    Owner owner2 = owner1; // Testiranje kopiranja
+    Owner owner2 = owner1;
 
     cout << "Interacting with pets for owner 1:" << std::endl;
     owner1.interactWithPets();
@@ -20,7 +20,7 @@ int main()
     cout << "Interacting with pets for owner 2:" << std::endl;
     owner2.interactWithPets();
 
-    // Pronalaženje vlasnika najsretnijeg ljubimca
+    
     int happinessOwner1 = owner1.interactWithPets();
     int happinessOwner2 = owner2.interactWithPets();
 
