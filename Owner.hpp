@@ -11,14 +11,11 @@ class Owner
 public:
     Owner(const std::string& name);
 
-    
     void addPet(const VirtualPet& pet);
-    int interactWithPets();  
+    int interactWithPets(int numInteractions);
 
-    
     const string& getName() const;
 
-   
     Owner(const Owner& other);
 
 private:
