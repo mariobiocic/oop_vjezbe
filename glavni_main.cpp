@@ -14,18 +14,17 @@ int main() {
 
     Owner owner2 = owner1;
 
-    cout << "Interacting with pets for owner 1:" << std::endl;
-    owner1.interactWithPets(2);
-
-    cout << "Interacting with pets for owner 2:" << std::endl;
-    owner2.interactWithPets(2);
-
+    cout << "Interacting with pets for owner 1:" << endl;
     int happinessOwner1 = owner1.interactWithPets(2);
+    cout << "Total happiness for owner 1: " << happinessOwner1 << endl;
+
+    cout << "Interacting with pets for owner 2:" << endl;
     int happinessOwner2 = owner2.interactWithPets(2);
+    cout << "Total happiness for owner 2: " << happinessOwner2 << endl;
 
     const Owner& happiestOwner = (happinessOwner1 > happinessOwner2) ? owner1 : owner2;
 
-    cout << "The owner with the happiest pet is: " << happiestOwner.getName() << std::endl;
+    cout << "The owner with the happiest pet is: " << happiestOwner.getName() << endl;
 
     return 0;
 }
