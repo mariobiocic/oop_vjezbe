@@ -90,9 +90,18 @@ public:
     VirtualPet& operator++()
     {
         bodovi -= 1;
-        brojPojedenihPorcija += 1; 
+        brojPojedenihPorcija += 1;
+
+        
+        if (brojPojedenihPorcija > 0) 
+        {
+            gladan = false;
+            brojPojedenihPorcija = 0;
+        }
+
         return *this;
     }
+
 
     VirtualPet operator++(int)
     {
@@ -148,7 +157,7 @@ int main()
     cout << "Broj raspolozivih porcija hrane: " << get_counter() << endl;
 
     VirtualPet ljubimac1("Azriel", "Macka", 10, true);
-    VirtualPet ljubimac2("Rex", "Pas", 15, false);
+    VirtualPet ljubimac2("Rex", "Pas", 12, false);
 
     cout << "Ljubimac 1: " << ljubimac1 << endl;
     cout << "Ljubimac 2: " << ljubimac2 << endl;
