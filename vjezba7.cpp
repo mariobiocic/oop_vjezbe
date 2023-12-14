@@ -155,7 +155,7 @@ int main()
 
     ljubimac1++;
 
-    cout << "Ljubimac 1 nakon inkrementa: " << ljubimac1 << endl;
+    cout << "Ljubimac 1 nakon radnje: " << ljubimac1 << endl;
 
     cout << "Broj pojedenih porcija Ljubimca 1: " << ljubimac1.getBrojPojedenihPorcija() << endl;
 
