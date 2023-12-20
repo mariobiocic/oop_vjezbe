@@ -8,12 +8,12 @@ class Neprijatelj
 {
 protected:
     string ime;
-    int zdravlje;
+    int health;
     int steta;
 
 public:
     Neprijatelj(const string& ime, int zdravlje, int steta)
-        : ime(ime), zdravlje(zdravlje), steta(steta) {
+        : ime(ime), health(zdravlje), steta(steta) {
         if (zdravlje < 0 || steta < 0) {
             throw invalid_argument("Zdravlje i steta moraju biti pozitivni.");
         }
@@ -43,7 +43,7 @@ public:
 
     void prikaziInfo() const override 
     {
-        cout << "Boss: " << ime << ", Zdravlje: " << zdravlje << ", steta: " << steta << ", Oruzje: " << oruzje << "\n";
+        cout << "Boss: " << ime << ", Zdravlje: " << health << ", steta: " << steta << ", Oruzje: " << oruzje << "\n";
     }
 };
 
@@ -52,11 +52,11 @@ private:
     string sposobnost;
 
 public:
-    Èudovište(const std::string& ime, int zdravlje, int steta, const std::string& sposobnost)
+    Èudovište(const string& ime, int zdravlje, int steta, const string& sposobnost)
         : Neprijatelj(ime, zdravlje, steta), sposobnost(sposobnost) 
     {
         if (sposobnost.empty()) {
-            throw std::invalid_argument("Sposobnost ne moze biti prazna.");
+            throw invalid_argument("Sposobnost ne moze biti prazna.");
         }
     }
 
@@ -67,7 +67,7 @@ public:
 
     void prikaziInfo() const override 
     {
-        cout << "Cudoviste: " << ime << ", Zdravlje: " << zdravlje << ", Steta: " << steta << ", Sposobnost: " << sposobnost << "\n";
+        cout << "Cudoviste: " << ime << ", Zdravlje: " << health << ", Steta: " << steta << ", Sposobnost: " << sposobnost << "\n";
     }
 };
 
